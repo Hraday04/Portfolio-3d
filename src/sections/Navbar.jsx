@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { style } from "motion/react-client";
 
 
 function Navigation() {
@@ -28,7 +29,7 @@ function Navigation() {
       </li>
       <li className="nav-li">
         <a className="nav-link" href="#contact">
-          Contact
+      Contact
         </a>
       </li>
     </ul>
@@ -60,7 +61,7 @@ const Navbar = () => {
           >
             <img
               src={isOpen ? "assets/close.svg" : "assets/menu.svg"}
-              className="w-6 h-6 rounded-md"
+              className="w-8 h-8 rounded-md"
               alt="toggle"
             />
           </button>
@@ -91,3 +92,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
