@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import ProjectDetails from "./ProjectDetails";
+import { useMediaQuery } from "react-responsive";
+
+
 
 const Project = ({
   title,
@@ -11,11 +14,15 @@ const Project = ({
   setPreview,
 }) => {
   const [isHidden, setIsHidden] = useState(false);
+  const isMobile = useMediaQuery({ maxWidth: 853 });
+  
   return (
     <>
       <div
         className="flex-wrap items-center justify-between py-10 space-y-14 sm:flex sm:space-y-0"
-        onMouseEnter={() => setPreview(image)}
+        onMouseEnter={() => {
+          setPreview(isMobile ? null : image);
+        }}
         onMouseLeave={() => setPreview(null)}
       >
         <div>
@@ -51,3 +58,4 @@ const Project = ({
 };
 
 export default Project;
+
