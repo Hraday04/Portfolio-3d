@@ -15,6 +15,7 @@ const About = () => {
   return (
     <section className="c-space section-spacing" id="about">
       <h2 className="text-heading">About Me : </h2>
+      <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-neutral-500 to-sky-400 mb-15 mt-10" />
       <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
         {/* Grid 1 */}
         <div className="flex items-end grid-blue-color grid-1">
@@ -180,4 +181,5 @@ const About = () => {
 };
 
 export default About;
+
 
