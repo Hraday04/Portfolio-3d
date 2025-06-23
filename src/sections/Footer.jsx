@@ -1,25 +1,39 @@
-import { a } from "motion/react-client"
-import { mySocials } from "../constants"
+import { a } from "motion/react-client";
+import { mySocials } from "../constants";
 
 const Footer = () => {
   return (
-    <section className="flex flex-wrap items-center justify-between gap-5 pb-3 text-sm  text-neutral-400 c-space">
-      <div className="bg-gradient-to-r from-transparent mb-4 h-[1px] w-full"></div>
-      <div className="flex items-center justify-center gap-2">
-        <p>Terms & Conditions</p>
-        <p> | </p>
-        <p>Privacy Policy</p>
-      </div>
-      <div className="flex gap-3">
-        {mySocials.map((social, index) => 
-        (<a href={social.href} key={index} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-8 h-8 rounded-half hover:bg-gray-600 transition-colors duration-300">
-          <img src={social.icon} className="w-5 h-5" alt={social.name} />
-          </a>)
-      )}
-      </div>
-      <p>@2025 Hraday. All rights reserved</p>
-    </section>
-  )
-}
+    <footer className="w-full text-sm text-neutral-400 c-space py-8">
+      {/* Divider */}
+      <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-neutral-600 to-transparent mb-6" />
 
-export default Footer
+      {/* Footer Content */}
+      <div className="flex flex-col items-center justify-between gap-5 md:flex-row">
+        {/* Left: Made with line */}
+        <p className="flex items-center gap-1 text-center">
+          ☕ Made with caffeine & dark mode 💻
+        </p>
+
+        {/* Center: Social Icons */}
+        <div className="flex gap-4">
+          {mySocials.map((social, index) => (
+            <a
+              key={index}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-10 h-10 rounded-md border border-neutral-600 hover:bg-neutral-700 transition-colors duration-300"
+            >
+              <img src={social.icon} alt={social.name} className="w-5 h-5" />
+            </a>
+          ))}
+        </div>
+
+        {/* Right: Copyright */}
+        <p className="text-center">@2025 Hraday. All rights reserved.</p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
