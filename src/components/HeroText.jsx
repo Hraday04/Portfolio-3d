@@ -10,18 +10,17 @@ const HeroText = () => {
     visible: { opacity: 1, x: 0 },
   };
   return (
-      <div className="z-10 mt-20 text-center md:mt-40 md:text-left rounded-3xl bg-clip-text">
-          
+    <div className="z-10 mt-20 text-center md:mt-40 md:text-left rounded-3xl bg-clip-text">
       {/* Desktop View */}
       <div className="flex-col hidden md:flex c-space">
         <motion.h1
-          className="text-4xl font-medium"
+          className="text-4xl font-medium drop-shadow-[0_0_1px_skyblue] drop-shadow-[0_0_1px_skyblue] drop-shadow-[0_0_2px_skyblue]"
           variants={variants}
           initial="hidden"
           animate="visible"
           transition={{ delay: 1 }}
         >
-         Hey, I'm Hraday
+          Hey, I'm Hraday
         </motion.h1>
         <div className="flex flex-col items-start">
           <motion.p
@@ -31,7 +30,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.2 }}
           >
-          An Enthusiastic Developer <br /> Commited to make
+            An Enthusiastic Developer <br /> Commited to make
           </motion.p>
           <motion.div
             variants={variants}
@@ -54,19 +53,19 @@ const HeroText = () => {
             Web Applications
           </motion.p>
         </div>
-          </div>
-          
-          {/* Mobile View */}
-          
-      <div className="flex- flex-col space-y-6 md:hidden">
+      </div>
+
+      {/* Mobile View */}
+
+      <div className="flex- flex-col space-y-6 md:hidden text-3xl text-white">
         <motion.p
-          className="text-4xl font-medium"
+          className="text-4xl font-medium drop-shadow-[0_0_1px_skyblue] drop-shadow-[0_0_1px_skyblue] drop-shadow-[0_0_2px_skyblue]"
           variants={variants}
           initial="hidden"
           animate="visible"
           transition={{ delay: 1 }}
         >
-          Hey,I'm Hraday
+          Hey, I'm Hraday
         </motion.p>
         <div>
           <motion.p
@@ -76,7 +75,7 @@ const HeroText = () => {
             animate="visible"
             transition={{ delay: 1.2 }}
           >
-           Developing
+            Developing
           </motion.p>
           <motion.div
             variants={variants}
@@ -86,7 +85,7 @@ const HeroText = () => {
           >
             <FlipWords
               words={words}
-              className="font-bold text-white text-5xl mr-4 mt-2 "
+              className="font-bold text-white text-5xl mt-2 mb-2"
             />
           </motion.div>
           <motion.p
