@@ -55,11 +55,6 @@ export const myProjects = [
       },
       {
         id: 2,
-        name: "Tailwind",
-        path: "/assets/logos/react.svg",
-      },
-      {
-        id: 3,
         name: "React",
         path: "/assets/logos/react.png",
       },
@@ -289,3 +284,4 @@ export const experiences = [
 //     img: "https://robohash.org/eve",
 //   },
 ];
+
