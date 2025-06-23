@@ -3,9 +3,14 @@ import Card from "../components/Card";
 import { Globe } from "../components/Globe";
 import CopyEmailBt from "../components/CopyEmailBt";
 import { Frameworks } from "../components/Frameworks";
+import { useMediaQuery } from "react-responsive";
 
 
 const About = () => {
+  // Using useRef to avoid unnecessary re-renders
+  // If you need to check for mobile, you can use a media query or a library like react-responsive
+   const isMobile = useMediaQuery({ maxWidth: 853 });
+ 
   const grid2Container = useRef();
   return (
     <section className="c-space section-spacing" id="about">
@@ -19,15 +24,27 @@ const About = () => {
           />
           <div className="z-10">
             {/* <p className="headtext">Hraday here</p> */}
+            {!isMobile && (
+              <p className="subtext m-3">
+                ✨ Hello there! I'm the space geek behind this portfolio.I'm a
+                passionate developer who thrive on creating innovative web
+                applications.
+              </p>
+            )}
             <p className="subtext m-3">
-              ✨ Hey there! I'm a passionate software developer from India with
-              a love for building elegant and meaningful digital experiences.
+              {" "}
+              🚀 My journey in tech began in junior high when computer labs
+              first sparked my interest. I became fascinated with interactive,
+              responsive design—especially 3D—and that curiosity only grew
+              stronger in college as I started building my own projects.
             </p>
 
             <p className="subtext m-3">
-              🎮 Outside of coding, I’m all about movies, music, and gaming. FYI
-              : The 3D model above is the USS Enterprise from Star Trek, one of
-              my all-time favorite shows!
+              🎬 Outside of coding, I’m all about movies.
+            </p>
+            <p className="subtext m-3">
+              🛸 FYI : The 3D model above is the USS Enterprise from Star Trek,
+              one of my all-time favorite shows!
             </p>
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
@@ -139,17 +156,18 @@ const About = () => {
         {/* Grid 5 */}
         <div className="grid-default-color grid-5">
           <div className="z-10 w-[50%]">
-            <p className="headText">Resume </p>
-            <p className="subtext">
-              You can find my resume on{" "}
+            <h2 className="text-3xl font-bold text-white mb-3">📄 Resume</h2>
+            <p className="text-neutral-300">
+              You can view or download my resume directly from{" "}
               <a
                 href="https://drive.google.com/file/d/1ieI94DJioJuq2_qdxuFk379bGGJq3I8o/view?usp=drivesdk"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-300 hover:underline"
+                className="text-sky-400 underline hover:text-sky-300 transition"
               >
                 Google Drive
               </a>
+              .
             </p>
           </div>
           <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125">
@@ -162,3 +180,4 @@ const About = () => {
 };
 
 export default About;
+
